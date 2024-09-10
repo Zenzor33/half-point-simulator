@@ -4,8 +4,16 @@
 <div>Jets (13) +13.5 125</div>
 <div>Question: How much is the 13 point worth?</div>
 
-<%= form_with url: check_answer_home_index_path do |form| %>
+<%= form_with model: @game, url: home_index_path, method: :post do |form| %>
   <%= form.number_field :user_answer, style: "color: black;" %>
+  <%= form.hidden_field :favorite_team, value: @game.favorite_team %>
+  <%= form.hidden_field :favorite_spread, value: @game.favorite_spread %>
+  <%= form.hidden_field :favorite_points, value: @game.favorite_points %>
+  <%= form.hidden_field :underdog_team, value: @game.underdog_team %>
+  <%= form.hidden_field :underdog_spread, value: @game.underdog_spread %>
+  <%= form.hidden_field :underdog_points, value: @game.underdog_points %>
+  <%= form.hidden_field :time, value: @game.time %>
+  <%= form.hidden_field :correct_answer, value: @game.correct_answer %>
   <%= form.submit "Submit" %>
 <% end %>
 

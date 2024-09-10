@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#new"
 
-  resources :home, only: :new do 
+  resources :home, only: [:new, :create] do 
     collection do 
       post :check_answer
     end

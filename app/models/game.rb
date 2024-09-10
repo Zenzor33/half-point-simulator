@@ -26,7 +26,7 @@ class Game < ApplicationRecord
     time = 15
     correct_answer = 26
 
-    create!(
+    new(
       favorite_team:,
       favorite_spread:,
       favorite_points:,

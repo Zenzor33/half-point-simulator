@@ -1,0 +1,10 @@
+<div>Time remaining: 15:00</div>
+<h2>Sharp book:</h2>
+<div>49ers (26) -13.5 -105</div>
+<div>Jets (13) +13.5 125</div>
+<div>Question: How much is the 13 point worth?</div>
+
+<%= form_with url: check_answer_home_index_path do |form| %>
+  <%= form.number_field :user_answer, style: "color: black;" %>
+  <%= form.submit "Submit" %>
+<% end %>
